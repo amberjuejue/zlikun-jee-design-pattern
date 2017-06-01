@@ -1,2 +1,6 @@
-.settings
-.project
+*.class
+*.log
+*.iml
+
+**/.settings
+**/.project
