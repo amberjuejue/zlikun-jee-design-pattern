@@ -3,10 +3,8 @@ package com.zlikun.jee;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -27,7 +25,8 @@ public class Singleton2Test {
     @Test
     public void test_multi() {
 
-        final Set<Singleton2> set = new HashSet<>() ;
+        // 使用ConcurrentHashMap代替HashSet(内部使用HashMap，不适用于并发)，以应用于并发条件下
+        final ConcurrentMap<Singleton2 ,Boolean> map = new ConcurrentHashMap<>() ;
         ExecutorService exec = Executors.newFixedThreadPool(200) ;
 
         // 约定一个执行时间(模拟并发，原因是类比较简单，初始化速度太快，无法真实再现并发情况)
@@ -39,7 +38,7 @@ public class Singleton2Test {
                     while (true) {
                         // 到约定时间后再执行(构成并发)
                         if (moment < System.currentTimeMillis()) {
-                            set.add(Singleton2.getInstance()) ;
+                            map.put(Singleton2.getInstance() ,Boolean.TRUE) ;
                             break;
                         }
                     }
@@ -51,7 +50,7 @@ public class Singleton2Test {
         while (!exec.isTerminated()) ;
 
         // 如果元素个数为1，表示未生成不同实例
-        Assert.assertTrue(set.size() > 1);
+        Assert.assertTrue(map.size() > 1);
     }
 
 }

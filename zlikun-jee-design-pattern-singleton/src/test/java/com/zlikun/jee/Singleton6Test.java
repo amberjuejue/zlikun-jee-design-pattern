@@ -12,12 +12,12 @@ import java.util.concurrent.Executors;
  * @auther zlikun <zlikun-dev@hotmail.com>
  * @date 2017/6/5 18:23
  */
-public class Singleton3Test {
+public class Singleton6Test {
 
     @Test
     public void test_single() {
 
-        Assert.assertTrue(Singleton3.getInstance() == Singleton3.getInstance());
+        Assert.assertTrue(Singleton6.INSTANCE == Singleton6.INSTANCE);
 
     }
 
@@ -25,7 +25,7 @@ public class Singleton3Test {
     public void test_multi() {
 
         // 使用ConcurrentHashMap代替HashSet(内部使用HashMap，不适用于并发)，以应用于并发条件下
-        final ConcurrentMap<Singleton3 ,Boolean> map = new ConcurrentHashMap<>() ;
+        final ConcurrentMap<Singleton6 ,Boolean> map = new ConcurrentHashMap<>() ;
         ExecutorService exec = Executors.newFixedThreadPool(400) ;
 
         // 约定一个执行时间(模拟并发，原因是类比较简单，初始化速度太快，无法真实再现并发情况)
@@ -37,7 +37,7 @@ public class Singleton3Test {
                     while (true) {
                         // 到约定时间后再执行(构成并发)
                         if (moment < System.currentTimeMillis()) {
-                            map.put(Singleton3.getInstance() ,Boolean.TRUE) ;
+                            map.put(Singleton6.INSTANCE ,Boolean.TRUE) ;
                             break;
                         }
                     }

@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 懒汉式单例，使用ReentrantLock实现，与双重检查机制存在同样问题(但个人测试感觉当前方式发生的几率似乎小一些)
+ * 懒汉式单例，使用ReentrantLock实现
  * @auther zlikun <zlikun-dev@hotmail.com>
  * @date 2017/6/5 18:27
  */
