@@ -12,8 +12,6 @@ public class Singleton4 {
     private static final AtomicInteger COUNTER = new AtomicInteger() ;
     private static Singleton4 INSTANCE ;
 
-    static Singleton4 obj = new Singleton4() ;
-
     private Singleton4() {
         System.out.println(String.format("initialized - %03d" ,COUNTER.incrementAndGet()));
     }

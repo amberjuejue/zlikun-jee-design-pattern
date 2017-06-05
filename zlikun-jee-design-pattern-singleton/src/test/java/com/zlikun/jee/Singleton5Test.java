@@ -12,19 +12,19 @@ import java.util.concurrent.Executors;
  * @auther zlikun <zlikun-dev@hotmail.com>
  * @date 2017/6/5 18:23
  */
-public class Singleton4Test {
+public class Singleton5Test {
 
     @Test
     public void test_single() {
 
-        Assert.assertTrue(Singleton4.getInstance() == Singleton4.getInstance());
+        Assert.assertTrue(Singleton5.getInstance() == Singleton5.getInstance());
 
     }
 
     @Test
     public void test_multi() {
 
-        final Set<Singleton4> set = new HashSet<>() ;
+        final Set<Singleton5> set = new HashSet<>() ;
         ExecutorService exec = Executors.newFixedThreadPool(400) ;
 
         // 约定一个执行时间(模拟并发，原因是类比较简单，初始化速度太快，无法真实再现并发情况)
@@ -36,7 +36,7 @@ public class Singleton4Test {
                     while (true) {
                         // 到约定时间后再执行(构成并发)
                         if (moment < System.currentTimeMillis()) {
-                            set.add(Singleton4.getInstance()) ;
+                            set.add(Singleton5.getInstance()) ;
                             break;
                         }
                     }
