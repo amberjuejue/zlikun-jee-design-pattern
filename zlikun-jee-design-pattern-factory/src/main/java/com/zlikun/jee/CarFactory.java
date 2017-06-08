@@ -1,7 +1,7 @@
 package com.zlikun.jee;
 
-import com.zlikun.jee.impl.FerrariCar;
-import com.zlikun.jee.impl.LamborghiniCar;
+import com.zlikun.jee.product.impl.FerrariCar;
+import com.zlikun.jee.product.impl.LamborghiniCar;
 
 /**
  * @auther zlikun <zlikun-dev@hotmail.com>
