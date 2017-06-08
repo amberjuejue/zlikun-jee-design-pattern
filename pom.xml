@@ -12,6 +12,7 @@
 		<module>zlikun-jee-design-pattern-singleton</module>
         <module>zlikun-jee-design-pattern-factory</module>
         <module>zlikun-jee-design-pattern-factory-method</module>
+        <module>zlikun-jee-design-pattern-abstract-factory</module>
     </modules>
 
 	<properties>
