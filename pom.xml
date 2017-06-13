@@ -15,6 +15,7 @@
         <module>zlikun-jee-design-pattern-abstract-factory</module>
         <module>zlikun-jee-design-pattern-builder</module>
         <module>zlikun-jee-design-pattern-facade</module>
+        <module>zlikun-jee-design-pattern-proxy</module>
     </modules>
 
 	<properties>
