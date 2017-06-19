@@ -18,6 +18,7 @@
         <module>zlikun-jee-design-pattern-proxy</module>
         <module>zlikun-jee-design-pattern-adapter</module>
         <module>zlikun-jee-design-pattern-composite</module>
+        <module>zlikun-jee-design-pattern-decorator</module>
     </modules>
 
 	<properties>

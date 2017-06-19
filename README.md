@@ -25,7 +25,7 @@ Java设计模式知识整理工程
 - 代理(proxy)
 - 适配器(adapter)
 - 组合(composite)
-- 装饰者
+- 装饰者(decorator)
 - 桥
 - 享元
 
