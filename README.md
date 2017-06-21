@@ -26,7 +26,7 @@ Java设计模式知识整理工程
 - 适配器(adapter)
 - 组合(composite)
 - 装饰者(decorator)
-- 桥
+- 桥(bridge)
 - 享元
 
 #### 行为型模式
