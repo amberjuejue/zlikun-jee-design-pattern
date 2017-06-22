@@ -27,7 +27,7 @@ Java设计模式知识整理工程
 - 组合(composite)
 - 装饰者(decorator)
 - 桥(bridge)
-- 享元
+- 享元(flyweight)
 
 #### 行为型模式
 - 模板(template method)
