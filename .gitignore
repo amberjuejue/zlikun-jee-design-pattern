@@ -4,4 +4,7 @@
 
 **/.settings
 **/.project
+**/.classpath
 **/.idea
+
+**/target
